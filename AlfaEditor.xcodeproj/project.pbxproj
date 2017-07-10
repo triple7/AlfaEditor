@@ -1,0 +1,532 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		431ADA8D1DC4D17300A12291 /* NewItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431ADA8C1DC4D17300A12291 /* NewItemViewController.swift */; };
+		431ADA8F1DC5864D00A12291 /* AppNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431ADA8E1DC5864D00A12291 /* AppNotifications.swift */; };
+		431ADA911DC6179400A12291 /* ConvolutionNN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431ADA901DC6179400A12291 /* ConvolutionNN.swift */; };
+		431ADA931DC6253700A12291 /* NodeGeometryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431ADA921DC6253700A12291 /* NodeGeometryViewController.swift */; };
+		431ADA951DC6255600A12291 /* NodeAudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431ADA941DC6255600A12291 /* NodeAudioViewController.swift */; };
+		431ADA971DC6257000A12291 /* NodeBehaviorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431ADA961DC6257000A12291 /* NodeBehaviorViewController.swift */; };
+		431ADA991DC6270E00A12291 /* MainNodeModificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431ADA981DC6270E00A12291 /* MainNodeModificationViewController.swift */; };
+		431ADA9B1DC62A0E00A12291 /* ModelPreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431ADA9A1DC62A0E00A12291 /* ModelPreviewController.swift */; };
+		433744601DA2137200CC4100 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4337445F1DA2137200CC4100 /* AVFoundation.framework */; };
+		433744621DA2138E00CC4100 /* AssetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433744611DA2138E00CC4100 /* AssetManager.swift */; };
+		433744641DA213C400CC4100 /* AudioLayerEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433744631DA213C400CC4100 /* AudioLayerEngine.swift */; };
+		433744661DA2141B00CC4100 /* SceneKitRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433744651DA2141B00CC4100 /* SceneKitRenderer.swift */; };
+		433744681DA2148500CC4100 /* SVGParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433744671DA2148500CC4100 /* SVGParser.swift */; };
+		4337446B1DA21BB800CC4100 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 4337446A1DA21BB800CC4100 /* art.scnassets */; };
+		433BFDD91DCE03C0009AB7AE /* RawImageViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433BFDD81DCE03C0009AB7AE /* RawImageViewer.swift */; };
+		433BFDDD1DCE1C19009AB7AE /* UndistortMetalUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433BFDDC1DCE1C19009AB7AE /* UndistortMetalUtility.swift */; };
+		433BFDE01DCE1E84009AB7AE /* UndistortVertexShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 433BFDDF1DCE1E84009AB7AE /* UndistortVertexShader.metal */; };
+		433BFDE21DCE1EA7009AB7AE /* UndistortFragmentShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 433BFDE11DCE1EA7009AB7AE /* UndistortFragmentShader.metal */; };
+		433BFDE41DCE1ECC009AB7AE /* UndistortGeometryShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 433BFDE31DCE1ECC009AB7AE /* UndistortGeometryShader.metal */; };
+		43658FD31DA8D64D0089DE4B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43658FD21DA8D64D0089DE4B /* Foundation.framework */; };
+		43658FD51DA8D6550089DE4B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43658FD41DA8D6550089DE4B /* Cocoa.framework */; };
+		43658FD71DA8D6CF0089DE4B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43658FD61DA8D6CF0089DE4B /* QuartzCore.framework */; };
+		436809A71DA78D03007F0421 /* AddNodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436809A61DA78D03007F0421 /* AddNodeViewController.swift */; };
+		436D51FB1DCA149E00B1A08B /* NodeFeatures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436D51FA1DCA149E00B1A08B /* NodeFeatures.swift */; };
+		43758FEC1DCDECE5004CB87A /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43758FEB1DCDECE5004CB87A /* Utilities.swift */; };
+		437A9A351DB215A9008BE3F7 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 437A9A341DB215A9008BE3F7 /* AppKit.framework */; };
+		439A0E2F1DCC8AA600D71B0D /* LeapObjectiveC.mm in Sources */ = {isa = PBXBuildFile; fileRef = 439A0E2E1DCC8AA600D71B0D /* LeapObjectiveC.mm */; };
+		439A0E311DCC8BC400D71B0D /* libLeap.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 439A0E301DCC8BC400D71B0D /* libLeap.dylib */; };
+		439A0E331DCC8C7400D71B0D /* libLeap.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 439A0E301DCC8BC400D71B0D /* libLeap.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		439A0E351DCCA54200D71B0D /* LeapMotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439A0E341DCCA54200D71B0D /* LeapMotionManager.swift */; };
+		43BA4BEF1DA1C3C100871D48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BA4BEE1DA1C3C100871D48 /* AppDelegate.swift */; };
+		43BA4BF31DA1C3C100871D48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43BA4BF21DA1C3C100871D48 /* Assets.xcassets */; };
+		43BA4BF61DA1C3C200871D48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43BA4BF41DA1C3C200871D48 /* Main.storyboard */; };
+		43BA4BFE1DA1C45700871D48 /* AlfaEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BA4BFD1DA1C45700871D48 /* AlfaEditorViewController.swift */; };
+		43BA4C001DA1C5C000871D48 /* SystemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BA4BFF1DA1C5C000871D48 /* SystemViewController.swift */; };
+		43BA4C021DA1C60D00871D48 /* ModifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BA4C011DA1C60D00871D48 /* ModifyViewController.swift */; };
+		43BA4C041DA1C91A00871D48 /* SceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BA4C031DA1C91A00871D48 /* SceneViewController.swift */; };
+		43BA4C061DA1C99800871D48 /* SceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BA4C051DA1C99800871D48 /* SceneView.swift */; };
+		43BA4C091DA1CA1F00871D48 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BA4C081DA1CA1F00871D48 /* SceneKit.framework */; };
+		43BA4C0B1DA1D78D00871D48 /* AudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BA4C0A1DA1D78D00871D48 /* AudioViewController.swift */; };
+		43C6E5F61DA8BD9000169E0F /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C6E5F51DA8BD9000169E0F /* Category.swift */; };
+		43C6E5F81DA8BE3400169E0F /* SVGFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C6E5F71DA8BE3400169E0F /* SVGFile.swift */; };
+		43FB3BF41DC75A5E00F659A5 /* MetalInitialiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FB3BF31DC75A5E00F659A5 /* MetalInitialiser.swift */; };
+		43FB3BF61DC7772C00F659A5 /* CNNBuild.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FB3BF51DC7772C00F659A5 /* CNNBuild.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		439A0E321DCC8C4100D71B0D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				439A0E331DCC8C7400D71B0D /* libLeap.dylib in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		431ADA8C1DC4D17300A12291 /* NewItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewItemViewController.swift; sourceTree = "<group>"; };
+		431ADA8E1DC5864D00A12291 /* AppNotifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppNotifications.swift; sourceTree = "<group>"; };
+		431ADA901DC6179400A12291 /* ConvolutionNN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConvolutionNN.swift; sourceTree = "<group>"; };
+		431ADA921DC6253700A12291 /* NodeGeometryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeGeometryViewController.swift; sourceTree = "<group>"; };
+		431ADA941DC6255600A12291 /* NodeAudioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeAudioViewController.swift; sourceTree = "<group>"; };
+		431ADA961DC6257000A12291 /* NodeBehaviorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeBehaviorViewController.swift; sourceTree = "<group>"; };
+		431ADA981DC6270E00A12291 /* MainNodeModificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNodeModificationViewController.swift; sourceTree = "<group>"; };
+		431ADA9A1DC62A0E00A12291 /* ModelPreviewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelPreviewController.swift; sourceTree = "<group>"; };
+		4337445F1DA2137200CC4100 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		433744611DA2138E00CC4100 /* AssetManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetManager.swift; sourceTree = "<group>"; };
+		433744631DA213C400CC4100 /* AudioLayerEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioLayerEngine.swift; sourceTree = "<group>"; };
+		433744651DA2141B00CC4100 /* SceneKitRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneKitRenderer.swift; sourceTree = "<group>"; };
+		433744671DA2148500CC4100 /* SVGParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVGParser.swift; sourceTree = "<group>"; };
+		4337446A1DA21BB800CC4100 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		433BFDD81DCE03C0009AB7AE /* RawImageViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RawImageViewer.swift; sourceTree = "<group>"; };
+		433BFDDC1DCE1C19009AB7AE /* UndistortMetalUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UndistortMetalUtility.swift; sourceTree = "<group>"; };
+		433BFDDF1DCE1E84009AB7AE /* UndistortVertexShader.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = UndistortVertexShader.metal; sourceTree = "<group>"; };
+		433BFDE11DCE1EA7009AB7AE /* UndistortFragmentShader.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = UndistortFragmentShader.metal; sourceTree = "<group>"; };
+		433BFDE31DCE1ECC009AB7AE /* UndistortGeometryShader.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = UndistortGeometryShader.metal; sourceTree = "<group>"; };
+		43658FD21DA8D64D0089DE4B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		43658FD41DA8D6550089DE4B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		43658FD61DA8D6CF0089DE4B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		436809A61DA78D03007F0421 /* AddNodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNodeViewController.swift; sourceTree = "<group>"; };
+		436D51FA1DCA149E00B1A08B /* NodeFeatures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeFeatures.swift; sourceTree = "<group>"; };
+		43758FEB1DCDECE5004CB87A /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		437A9A341DB215A9008BE3F7 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		439A0E2A1DCC8AA600D71B0D /* AlfaEditor-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AlfaEditor-Bridging-Header.h"; sourceTree = "<group>"; };
+		439A0E2B1DCC8AA600D71B0D /* Leap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Leap.h; path = LeapObjCSDK/Leap.h; sourceTree = "<group>"; };
+		439A0E2C1DCC8AA600D71B0D /* LeapMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeapMath.h; path = LeapObjCSDK/LeapMath.h; sourceTree = "<group>"; };
+		439A0E2D1DCC8AA600D71B0D /* LeapObjectiveC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeapObjectiveC.h; path = LeapObjCSDK/LeapObjectiveC.h; sourceTree = "<group>"; };
+		439A0E2E1DCC8AA600D71B0D /* LeapObjectiveC.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LeapObjectiveC.mm; path = LeapObjCSDK/LeapObjectiveC.mm; sourceTree = "<group>"; };
+		439A0E301DCC8BC400D71B0D /* libLeap.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libLeap.dylib; sourceTree = "<group>"; };
+		439A0E341DCCA54200D71B0D /* LeapMotionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeapMotionManager.swift; sourceTree = "<group>"; };
+		43BA4BEB1DA1C3C100871D48 /* AlfaEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlfaEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		43BA4BEE1DA1C3C100871D48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		43BA4BF21DA1C3C100871D48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		43BA4BF51DA1C3C200871D48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		43BA4BF71DA1C3C200871D48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43BA4BFD1DA1C45700871D48 /* AlfaEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlfaEditorViewController.swift; sourceTree = "<group>"; };
+		43BA4BFF1DA1C5C000871D48 /* SystemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemViewController.swift; sourceTree = "<group>"; };
+		43BA4C011DA1C60D00871D48 /* ModifyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModifyViewController.swift; sourceTree = "<group>"; };
+		43BA4C031DA1C91A00871D48 /* SceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneViewController.swift; sourceTree = "<group>"; };
+		43BA4C051DA1C99800871D48 /* SceneView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneView.swift; sourceTree = "<group>"; };
+		43BA4C081DA1CA1F00871D48 /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
+		43BA4C0A1DA1D78D00871D48 /* AudioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioViewController.swift; sourceTree = "<group>"; };
+		43C6E5F51DA8BD9000169E0F /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		43C6E5F71DA8BE3400169E0F /* SVGFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVGFile.swift; sourceTree = "<group>"; };
+		43FB3BF31DC75A5E00F659A5 /* MetalInitialiser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalInitialiser.swift; sourceTree = "<group>"; };
+		43FB3BF51DC7772C00F659A5 /* CNNBuild.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CNNBuild.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		43BA4BE81DA1C3C100871D48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				437A9A351DB215A9008BE3F7 /* AppKit.framework in Frameworks */,
+				439A0E311DCC8BC400D71B0D /* libLeap.dylib in Frameworks */,
+				43658FD71DA8D6CF0089DE4B /* QuartzCore.framework in Frameworks */,
+				43658FD51DA8D6550089DE4B /* Cocoa.framework in Frameworks */,
+				43658FD31DA8D64D0089DE4B /* Foundation.framework in Frameworks */,
+				433744601DA2137200CC4100 /* AVFoundation.framework in Frameworks */,
+				43BA4C091DA1CA1F00871D48 /* SceneKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		433BFDDE1DCE1E19009AB7AE /* shaders */ = {
+			isa = PBXGroup;
+			children = (
+				433BFDDF1DCE1E84009AB7AE /* UndistortVertexShader.metal */,
+				433BFDE11DCE1EA7009AB7AE /* UndistortFragmentShader.metal */,
+				433BFDE31DCE1ECC009AB7AE /* UndistortGeometryShader.metal */,
+			);
+			name = shaders;
+			sourceTree = "<group>";
+		};
+		43749D051DA226F6003D3611 /* view controllers */ = {
+			isa = PBXGroup;
+			children = (
+				431ADA921DC6253700A12291 /* NodeGeometryViewController.swift */,
+				431ADA941DC6255600A12291 /* NodeAudioViewController.swift */,
+				431ADA961DC6257000A12291 /* NodeBehaviorViewController.swift */,
+				431ADA981DC6270E00A12291 /* MainNodeModificationViewController.swift */,
+				431ADA9A1DC62A0E00A12291 /* ModelPreviewController.swift */,
+			);
+			name = "view controllers";
+			sourceTree = "<group>";
+		};
+		439A0E291DCC8A6400D71B0D /* Leap Motion */ = {
+			isa = PBXGroup;
+			children = (
+				439A0E2B1DCC8AA600D71B0D /* Leap.h */,
+				439A0E2C1DCC8AA600D71B0D /* LeapMath.h */,
+				439A0E2D1DCC8AA600D71B0D /* LeapObjectiveC.h */,
+				439A0E2E1DCC8AA600D71B0D /* LeapObjectiveC.mm */,
+				439A0E2A1DCC8AA600D71B0D /* AlfaEditor-Bridging-Header.h */,
+				439A0E341DCCA54200D71B0D /* LeapMotionManager.swift */,
+			);
+			name = "Leap Motion";
+			sourceTree = "<group>";
+		};
+		43BA4BE21DA1C3C100871D48 = {
+			isa = PBXGroup;
+			children = (
+				43BA4BED1DA1C3C100871D48 /* AlfaEditor */,
+				43BA4BEC1DA1C3C100871D48 /* Products */,
+				43BA4C071DA1CA1F00871D48 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		43BA4BEC1DA1C3C100871D48 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				43BA4BEB1DA1C3C100871D48 /* AlfaEditor.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		43BA4BED1DA1C3C100871D48 /* AlfaEditor */ = {
+			isa = PBXGroup;
+			children = (
+				439A0E301DCC8BC400D71B0D /* libLeap.dylib */,
+				439A0E291DCC8A6400D71B0D /* Leap Motion */,
+				43FB3BF21DC75A1D00F659A5 /* CNN */,
+				43749D051DA226F6003D3611 /* view controllers */,
+				4337446A1DA21BB800CC4100 /* art.scnassets */,
+				43BA4BEE1DA1C3C100871D48 /* AppDelegate.swift */,
+				43BA4BF21DA1C3C100871D48 /* Assets.xcassets */,
+				43BA4BF41DA1C3C200871D48 /* Main.storyboard */,
+				43BA4BF71DA1C3C200871D48 /* Info.plist */,
+				43BA4BFD1DA1C45700871D48 /* AlfaEditorViewController.swift */,
+				43BA4BFF1DA1C5C000871D48 /* SystemViewController.swift */,
+				43BA4C011DA1C60D00871D48 /* ModifyViewController.swift */,
+				43BA4C031DA1C91A00871D48 /* SceneViewController.swift */,
+				43BA4C051DA1C99800871D48 /* SceneView.swift */,
+				43BA4C0A1DA1D78D00871D48 /* AudioViewController.swift */,
+				433744611DA2138E00CC4100 /* AssetManager.swift */,
+				433744631DA213C400CC4100 /* AudioLayerEngine.swift */,
+				433744651DA2141B00CC4100 /* SceneKitRenderer.swift */,
+				433744671DA2148500CC4100 /* SVGParser.swift */,
+				436809A61DA78D03007F0421 /* AddNodeViewController.swift */,
+				43C6E5F51DA8BD9000169E0F /* Category.swift */,
+				43C6E5F71DA8BE3400169E0F /* SVGFile.swift */,
+				431ADA8C1DC4D17300A12291 /* NewItemViewController.swift */,
+				431ADA8E1DC5864D00A12291 /* AppNotifications.swift */,
+				431ADA901DC6179400A12291 /* ConvolutionNN.swift */,
+				436D51FA1DCA149E00B1A08B /* NodeFeatures.swift */,
+				43758FEB1DCDECE5004CB87A /* Utilities.swift */,
+			);
+			path = AlfaEditor;
+			sourceTree = "<group>";
+		};
+		43BA4C071DA1CA1F00871D48 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				437A9A341DB215A9008BE3F7 /* AppKit.framework */,
+				43658FD61DA8D6CF0089DE4B /* QuartzCore.framework */,
+				43658FD41DA8D6550089DE4B /* Cocoa.framework */,
+				43658FD21DA8D64D0089DE4B /* Foundation.framework */,
+				4337445F1DA2137200CC4100 /* AVFoundation.framework */,
+				43BA4C081DA1CA1F00871D48 /* SceneKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		43FB3BF21DC75A1D00F659A5 /* CNN */ = {
+			isa = PBXGroup;
+			children = (
+				433BFDDE1DCE1E19009AB7AE /* shaders */,
+				43FB3BF31DC75A5E00F659A5 /* MetalInitialiser.swift */,
+				43FB3BF51DC7772C00F659A5 /* CNNBuild.swift */,
+				433BFDD81DCE03C0009AB7AE /* RawImageViewer.swift */,
+				433BFDDC1DCE1C19009AB7AE /* UndistortMetalUtility.swift */,
+			);
+			name = CNN;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		43BA4BEA1DA1C3C100871D48 /* AlfaEditor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43BA4BFA1DA1C3C200871D48 /* Build configuration list for PBXNativeTarget "AlfaEditor" */;
+			buildPhases = (
+				43BA4BE71DA1C3C100871D48 /* Sources */,
+				43BA4BE81DA1C3C100871D48 /* Frameworks */,
+				43BA4BE91DA1C3C100871D48 /* Resources */,
+				439A0E321DCC8C4100D71B0D /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AlfaEditor;
+			productName = AlfaEditor;
+			productReference = 43BA4BEB1DA1C3C100871D48 /* AlfaEditor.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		43BA4BE31DA1C3C100871D48 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = antoxicon;
+				TargetAttributes = {
+					43BA4BEA1DA1C3C100871D48 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 2SGX7F298W;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 43BA4BE61DA1C3C100871D48 /* Build configuration list for PBXProject "AlfaEditor" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 43BA4BE21DA1C3C100871D48;
+			productRefGroup = 43BA4BEC1DA1C3C100871D48 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				43BA4BEA1DA1C3C100871D48 /* AlfaEditor */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		43BA4BE91DA1C3C100871D48 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43BA4BF31DA1C3C100871D48 /* Assets.xcassets in Resources */,
+				4337446B1DA21BB800CC4100 /* art.scnassets in Resources */,
+				43BA4BF61DA1C3C200871D48 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		43BA4BE71DA1C3C100871D48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				431ADA9B1DC62A0E00A12291 /* ModelPreviewController.swift in Sources */,
+				439A0E2F1DCC8AA600D71B0D /* LeapObjectiveC.mm in Sources */,
+				433744621DA2138E00CC4100 /* AssetManager.swift in Sources */,
+				436D51FB1DCA149E00B1A08B /* NodeFeatures.swift in Sources */,
+				439A0E351DCCA54200D71B0D /* LeapMotionManager.swift in Sources */,
+				43FB3BF41DC75A5E00F659A5 /* MetalInitialiser.swift in Sources */,
+				43BA4C041DA1C91A00871D48 /* SceneViewController.swift in Sources */,
+				431ADA8D1DC4D17300A12291 /* NewItemViewController.swift in Sources */,
+				43BA4C021DA1C60D00871D48 /* ModifyViewController.swift in Sources */,
+				433BFDDD1DCE1C19009AB7AE /* UndistortMetalUtility.swift in Sources */,
+				43BA4C001DA1C5C000871D48 /* SystemViewController.swift in Sources */,
+				433BFDE41DCE1ECC009AB7AE /* UndistortGeometryShader.metal in Sources */,
+				433744661DA2141B00CC4100 /* SceneKitRenderer.swift in Sources */,
+				43FB3BF61DC7772C00F659A5 /* CNNBuild.swift in Sources */,
+				433744681DA2148500CC4100 /* SVGParser.swift in Sources */,
+				433BFDD91DCE03C0009AB7AE /* RawImageViewer.swift in Sources */,
+				43BA4BFE1DA1C45700871D48 /* AlfaEditorViewController.swift in Sources */,
+				431ADA911DC6179400A12291 /* ConvolutionNN.swift in Sources */,
+				43BA4BEF1DA1C3C100871D48 /* AppDelegate.swift in Sources */,
+				43758FEC1DCDECE5004CB87A /* Utilities.swift in Sources */,
+				43BA4C0B1DA1D78D00871D48 /* AudioViewController.swift in Sources */,
+				43C6E5F61DA8BD9000169E0F /* Category.swift in Sources */,
+				431ADA991DC6270E00A12291 /* MainNodeModificationViewController.swift in Sources */,
+				431ADA971DC6257000A12291 /* NodeBehaviorViewController.swift in Sources */,
+				433BFDE01DCE1E84009AB7AE /* UndistortVertexShader.metal in Sources */,
+				43BA4C061DA1C99800871D48 /* SceneView.swift in Sources */,
+				431ADA8F1DC5864D00A12291 /* AppNotifications.swift in Sources */,
+				431ADA931DC6253700A12291 /* NodeGeometryViewController.swift in Sources */,
+				433BFDE21DCE1EA7009AB7AE /* UndistortFragmentShader.metal in Sources */,
+				436809A71DA78D03007F0421 /* AddNodeViewController.swift in Sources */,
+				43C6E5F81DA8BE3400169E0F /* SVGFile.swift in Sources */,
+				431ADA951DC6255600A12291 /* NodeAudioViewController.swift in Sources */,
+				433744641DA213C400CC4100 /* AudioLayerEngine.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		43BA4BF41DA1C3C200871D48 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				43BA4BF51DA1C3C200871D48 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		43BA4BF81DA1C3C200871D48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		43BA4BF91DA1C3C200871D48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		43BA4BFB1DA1C3C200871D48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 2SGX7F298W;
+				INFOPLIST_FILE = AlfaEditor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AlfaEditor",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.antoxicon.AlfaEditor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AlfaEditor/AlfaEditor-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		43BA4BFC1DA1C3C200871D48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 2SGX7F298W;
+				INFOPLIST_FILE = AlfaEditor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AlfaEditor",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.antoxicon.AlfaEditor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AlfaEditor/AlfaEditor-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		43BA4BE61DA1C3C100871D48 /* Build configuration list for PBXProject "AlfaEditor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43BA4BF81DA1C3C200871D48 /* Debug */,
+				43BA4BF91DA1C3C200871D48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43BA4BFA1DA1C3C200871D48 /* Build configuration list for PBXNativeTarget "AlfaEditor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43BA4BFB1DA1C3C200871D48 /* Debug */,
+				43BA4BFC1DA1C3C200871D48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 43BA4BE31DA1C3C100871D48 /* Project object */;
+}
