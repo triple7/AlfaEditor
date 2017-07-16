@@ -5,7 +5,7 @@
 //  Created by Yuma Antoine Decaux on 4/11/16.
 //  Copyright © 2016 antoxicon. All rights reserved.
 //
-
+/*
 import Foundation
 import SceneKit
 
@@ -103,11 +103,10 @@ layerEngine.playInterfaceFX("selected")
 			let zProjection = (endPoint!.z * Float(self.paperToLensHeight)) / endPoint!.y
 			let Y = zProjection + Float(self.paperWidth)/2
 			let X = -xProjection + Float(self.paperHeight)/2
-			//print("coordinates: \(X), \(Y)")
-			if Int(X) > 0 && Int(X) < 210 {
-				if Int(Y) > 0 && Int(Y) < 297 {
-					self.point.x = CGFloat(X)
-					self.point.y = CGFloat(Y)
+			if Int(X) > 0 && Int(X) < self.paperWidth {
+				if Int(Y) > 0 && Int(Y) < self.paperHeight {
+					self.point.x = CGFloat( self.paperWidth - Int(X))
+					self.point.y = CGFloat( self.paperHeight - Int(Y))
 				}
 			}
 		}
@@ -136,3 +135,4 @@ layerEngine.playInterfaceFX("selected")
 	}
 
 }
+*/

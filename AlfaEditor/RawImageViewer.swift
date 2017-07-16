@@ -5,14 +5,14 @@
 //  Created by Yuma Antoine Decaux on 5/11/16.
 //  Copyright © 2016 antoxicon. All rights reserved.
 //
-
+/*
 import Foundation
 import Cocoa
 
 
 
 class RawImageViewer:NSImageView{
-let leap = LeapMotionManager.sharedInstance
+//let leap = LeapMotionManager.sharedInstance
 	//RawData and conversion
 	var imageRepresentative:NSImageRep?
 	var lastWidth:Int?
@@ -42,3 +42,4 @@ let leapImage = frame?.images
 	}
 
 }
+*/

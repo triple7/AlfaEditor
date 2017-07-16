@@ -18,9 +18,6 @@ class ModifyViewController: NSViewController, NSTableViewDataSource, NSTableView
 	//Modal view for the edit box
 	var editWindow:MainNodeModificationViewController?
 
-	//Materials for selected and unselected objects
-	let selectedMaterial = SCNMaterial()
-	let unselectedMaterial = SCNMaterial()
 var previouslySelected = false
 
 	override func viewDidLoad() {
@@ -28,8 +25,6 @@ var previouslySelected = false
 					editWindow = storyboard?.instantiateController(withIdentifier: "NodeModification") as? MainNodeModificationViewController
 		view.addSubview(addNode)
 //		view.addSubview(removeNode)
-		selectedMaterial.diffuse.contents = NSColor.orange
-		unselectedMaterial.diffuse.contents = NSColor.gray
 	}
 
 	override var representedObject: Any? {
@@ -79,12 +74,13 @@ var previouslySelected = false
 let node = assets.sceneNodes[modifyTable.selectedRow]
 		for nodeB in assets.sceneNodes{
 			if node.isEqual(nodeB){
-				nodeB.geometry?.materials = [selectedMaterial]
+				node.geometry?.materials = [assets.selectedMaterial]
 			}else{
-				nodeB.geometry?.materials = [unselectedMaterial]
-				nodeB.opacity = 0.4
+				nodeB.geometry?.materials = [assets.unselectedMaterial]
+				nodeB.opacity = 0.6
 			}
 		}
+previouslySelected = true
 	}
 
 	//Mark: Key and mouse events

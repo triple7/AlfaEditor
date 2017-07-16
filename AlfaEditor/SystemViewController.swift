@@ -17,7 +17,6 @@ class SystemViewController: NSViewController, NSOutlineViewDataSource, NSOutline
 	@IBOutlet weak var add: NSPopUpButton!
 	@IBOutlet weak var currentFile: NSTextField!
 
-
 	var currentFileText:String!{
 		didSet{
 currentFile.stringValue = "current file: \(currentFileText!)"
@@ -108,12 +107,12 @@ if tableColumn?.identifier == "DateColumn"{
 	func outlineViewSelectionDidChange(_ notification: Notification) {
 		if let category = outlineView.item(atRow: outlineView.selectedRow) as? Category{
 			assets.currentCategory = assets.categories.index(of: category)!
+		}else{
+currentFile.stringValue = (outlineView.item(atRow: outlineView.selectedRow) as? SVGFile)!.name
 		}
 	}
 
-
 	//Mark: Outline view double click action
-
 
 	@IBAction func expandCategory(_ sender: NSOutlineView) {
 		let item = sender.item(atRow: sender.clickedRow)
@@ -175,7 +174,6 @@ if tableColumn?.identifier == "DateColumn"{
 		}
 		outlineView.endUpdates()
 	}
-
 
 	//Mark: helper functions for popup
 
@@ -248,5 +246,9 @@ if (dialog.runModal() == NSModalResponseOK){
 		outlineView.endUpdates()
 	}
 
+	override func insertNewline(_ sender: Any?) {
+		print(currentFile)
+NotificationCenter.default.post(name: newSVGNotification, object: currentFile.stringValue)
+	}
 
 }

@@ -11,8 +11,7 @@ import SceneKit
 import Cocoa
 import AppKit
 
-
-class Assetmanager{
+class Assetmanager:NSObject, NSSpeechSynthesizerDelegate{
 	let renderer:SceneKitRenderer
 	let parser:SVGParser
 	let  speech  = NSSpeechSynthesizer(voice: "com.acapelagroup.AGix.voice.Lisa22k_HQ")!
@@ -41,8 +40,16 @@ var sampleNames = [String]()
 
 	//Date formatter
 	let dateFormatter = DateFormatter()
+	var isSpeaking = false
 
-	init(){
+	//Sounds associated to a given file
+	var sounds = [SCNAudioSource]()
+
+	//Materials for selected and unselected objects
+	let selectedMaterial = SCNMaterial()
+	let unselectedMaterial = SCNMaterial()
+
+	override init(){
 		renderer = SceneKitRenderer()
 		parser = SVGParser(delegate: renderer)
 		speech.usesFeedbackWindow = false
@@ -101,14 +108,35 @@ categories = Category.filesList(list: allFiles)
 				samples.append(source)
 				sampleNames.append(file.components(separatedBy: "/").last!)
 			}
-		print(sampleNames)
+
+		selectedMaterial.diffuse.contents = NSColor.orange
+		unselectedMaterial.diffuse.contents = NSColor.red
+
+		super.init()
+
 	}
 
 	func retrieveSVG(name: String)->URL{
 		currentFile = name
-		let path = "\(dataPath)\(name).svg"
+		let path = "\(dataPath)\(name)"
 		let url = URL(fileURLWithPath: path)
 		return url
+	}
+
+	func loadSounds(name: String, type: String = "sampler"){
+		do{
+			let soundDirectory = try FileManager.default.contentsOfDirectory(atPath: "\(dataPath)sounds/\(name)")
+			for clipName in soundDirectory{
+				print(clipName)
+				let path = "\(dataPath)sounds/\(name)/\(clipName)"
+				let url = URL(fileURLWithPath: path)
+				let source = SCNAudioSource(url: url)!
+sounds.append(source)
+			}
+		}catch{
+			print("error loading sound directory")
+		}
+
 	}
 
 	//Mark: System tab asset management functions
@@ -162,6 +190,22 @@ try FileManager.default.createFile(atPath: "\(dataPath)SVG/\(categories[currentC
 categories[currentCategory].addFile(file: newSVG)
 		NotificationCenter.default.post(newCategoryNotification)
 	}
+
+	func resetScenes(){
+		renderer.resetScene()
+ currentFile = ""
+nodes.removeAll()
+		sceneNodes.removeAll()
+		nodeMaterials.removeAll()
+		nodesFeatures.removeAll()
+		appType = ""
+		sounds.removeAll()
+	}
+
+	func speechSynthesizer(_ sender: NSSpeechSynthesizer, didFinishSpeaking finishedSpeaking: Bool) {
+		isSpeaking = false
+	}
+
 
 }
 

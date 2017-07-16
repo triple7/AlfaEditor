@@ -23,4 +23,8 @@ let editWindowDeAllocationNotification = Notification.Name(rawValue: "EditWindow
 let nodeModificationNotification = Notification.Name(rawValue: "nodeModificationNotification")
 let didEditNodeNotification = Notification.Name(rawValue: "didEditNodeNotification")
 
+//New file change notification
+
+let newSVGNotification = Notification.Name(rawValue: "newSVG")
+
 

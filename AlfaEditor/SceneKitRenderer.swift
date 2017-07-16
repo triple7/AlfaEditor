@@ -148,28 +148,45 @@ class SceneKitRenderer : NSObject, MapParserDelegate  {
 		node.renderingOrder = renderingOrder
 		renderingOrder = renderingOrder + 1
 		sceneNode.addChildNode(node)
+		if node.name! != "canvas_background"{
 		assets.nodes.append((node.name!, node.position))
 		assets.sceneNodes.append(node)
 assets.nodeMaterials.append(node.geometry!.materials)
-
+		}
 	}
 
 	func calibrateScene(){
+		print("Calibrate")
 		let bound = sceneNode.boundingBox
 		let xPos = bound.max.x-bound.min.x
 		let yPos = bound.max.y-bound.min.y
+//		print(xPos)
+//		print(yPos)
+//		print(bound)
+
 		sceneNode.pivot.m41 = xPos/2
-		sceneNode.pivot.m42 = yPos/2
-		sceneNode.position.x = xPos
-		sceneNode.position.y = yPos
-		//assets.renderer.sceneNode.eulerAngles = SCNVector3(x: CGFloat(M_PI_2), y: 0.0, z: 0.0)
-		cameraNode.position = SCNVector3(x: xPos/2, y: yPos/2, z: 500.0)
-		cameraNode.camera?.zFar = 3000.0
+		sceneNode.pivot.m42 = -yPos/2
+		sceneNode.position.x = xPos/2
+		sceneNode.position.y = yPos/2
+		print(sceneNode.transform)
+		let constraint = SCNLookAtConstraint(target: sceneNode)
+		cameraNode.position = SCNVector3(x: xPos, y: yPos, z: 500.0)
+		cameraNode.constraints = [constraint]
+//		cameraNode.camera?.zFar = 3000.0
+		cameraNode.camera?.automaticallyAdjustsZRange = true
 
 		print("scene pivot has \(sceneNode.pivot.description)")
 		print("scene has position: \(sceneNode.worldTransform.description)")
+		print(sceneNode.boundingBox)
+		print("end Calibration")
 	}
 
+	func resetScene(){
+		for node in sceneNode.childNodes{
+			node.removeFromParentNode()
+		}
+	}
+	
 }
 
 extension SCNMatrix4 : CustomStringConvertible {

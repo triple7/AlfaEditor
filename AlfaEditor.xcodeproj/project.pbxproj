@@ -47,6 +47,7 @@
 		43BA4C061DA1C99800871D48 /* SceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BA4C051DA1C99800871D48 /* SceneView.swift */; };
 		43BA4C091DA1CA1F00871D48 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BA4C081DA1CA1F00871D48 /* SceneKit.framework */; };
 		43BA4C0B1DA1D78D00871D48 /* AudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BA4C0A1DA1D78D00871D48 /* AudioViewController.swift */; };
+		43C496181F1B87E10037DA84 /* SceneLeapMotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C496171F1B87E10037DA84 /* SceneLeapMotion.swift */; };
 		43C6E5F61DA8BD9000169E0F /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C6E5F51DA8BD9000169E0F /* Category.swift */; };
 		43C6E5F81DA8BE3400169E0F /* SVGFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C6E5F71DA8BE3400169E0F /* SVGFile.swift */; };
 		43FB3BF41DC75A5E00F659A5 /* MetalInitialiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FB3BF31DC75A5E00F659A5 /* MetalInitialiser.swift */; };
@@ -112,6 +113,7 @@
 		43BA4C051DA1C99800871D48 /* SceneView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneView.swift; sourceTree = "<group>"; };
 		43BA4C081DA1CA1F00871D48 /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
 		43BA4C0A1DA1D78D00871D48 /* AudioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioViewController.swift; sourceTree = "<group>"; };
+		43C496171F1B87E10037DA84 /* SceneLeapMotion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneLeapMotion.swift; sourceTree = "<group>"; };
 		43C6E5F51DA8BD9000169E0F /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		43C6E5F71DA8BE3400169E0F /* SVGFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVGFile.swift; sourceTree = "<group>"; };
 		43FB3BF31DC75A5E00F659A5 /* MetalInitialiser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalInitialiser.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				439A0E2E1DCC8AA600D71B0D /* LeapObjectiveC.mm */,
 				439A0E2A1DCC8AA600D71B0D /* AlfaEditor-Bridging-Header.h */,
 				439A0E341DCCA54200D71B0D /* LeapMotionManager.swift */,
+				43C496171F1B87E10037DA84 /* SceneLeapMotion.swift */,
 			);
 			name = "Leap Motion";
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 				433BFDE41DCE1ECC009AB7AE /* UndistortGeometryShader.metal in Sources */,
 				433744661DA2141B00CC4100 /* SceneKitRenderer.swift in Sources */,
 				43FB3BF61DC7772C00F659A5 /* CNNBuild.swift in Sources */,
+				43C496181F1B87E10037DA84 /* SceneLeapMotion.swift in Sources */,
 				433744681DA2148500CC4100 /* SVGParser.swift in Sources */,
 				433BFDD91DCE03C0009AB7AE /* RawImageViewer.swift in Sources */,
 				43BA4BFE1DA1C45700871D48 /* AlfaEditorViewController.swift in Sources */,
