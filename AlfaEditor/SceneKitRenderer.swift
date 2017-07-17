@@ -147,38 +147,35 @@ class SceneKitRenderer : NSObject, MapParserDelegate  {
 		node.castsShadow = true
 		node.renderingOrder = renderingOrder
 		renderingOrder = renderingOrder + 1
+		print("node is \(node.name)")
+		if node.name != nil{
 		sceneNode.addChildNode(node)
 		if node.name! != "canvas_background"{
 		assets.nodes.append((node.name!, node.position))
 		assets.sceneNodes.append(node)
 assets.nodeMaterials.append(node.geometry!.materials)
 		}
+		}
 	}
 
 	func calibrateScene(){
-		print("Calibrate")
 		let bound = sceneNode.boundingBox
 		let xPos = bound.max.x-bound.min.x
 		let yPos = bound.max.y-bound.min.y
-//		print(xPos)
-//		print(yPos)
-//		print(bound)
 
 		sceneNode.pivot.m41 = xPos/2
 		sceneNode.pivot.m42 = -yPos/2
 		sceneNode.position.x = xPos/2
 		sceneNode.position.y = yPos/2
-		print(sceneNode.transform)
 		let constraint = SCNLookAtConstraint(target: sceneNode)
 		cameraNode.position = SCNVector3(x: xPos, y: yPos, z: 500.0)
 		cameraNode.constraints = [constraint]
-//		cameraNode.camera?.zFar = 3000.0
 		cameraNode.camera?.automaticallyAdjustsZRange = true
 
-		print("scene pivot has \(sceneNode.pivot.description)")
-		print("scene has position: \(sceneNode.worldTransform.description)")
-		print(sceneNode.boundingBox)
-		print("end Calibration")
+		for n in assets.nodes{
+			print("asset node is: \(n.0)")
+		}
+
 	}
 
 	func resetScene(){

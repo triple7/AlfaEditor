@@ -90,10 +90,11 @@ sceneView.loops = true		}
 	var currentNode = ""
 	func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval){
 				DispatchQueue.global(qos: .userInteractive).async{
-		//var startPoint = self.leap!.point
-
-		//self.selector.position = SCNVector3(x: startPoint.x, y: startPoint.y, z: 200.0)
-					var startPoint = self.point
+if assets.appType == "map"{
+	self.soundNode.position.x = self.point.x
+	self.soundNode.position.y = self.point.y
+					}
+	var startPoint = self.point
 		var endPoint = startPoint
 		startPoint.z = 100
 		endPoint.z = -100.0
@@ -103,7 +104,11 @@ sceneView.loops = true		}
 				if self.currentNode != contacted.name!{
 				self.currentNode = contacted.name!
 self.highlightNode(node: contacted)
-			assets.speech.startSpeaking(self.currentNode)
+					if assets.appType == "map"{
+			assets.speech.startSpeaking("BLock \(self.currentNode)")
+					}else{
+						assets.speech.startSpeaking(self.currentNode)
+					}
 				}
 		}else{
 self.unhighlightNodes()
@@ -139,11 +144,20 @@ let name = notification.object as! String
 		assets.parser.parse(fromFileURL: url)
 		assets.renderer.calibrateScene()
 		scene.rootNode.addChildNode(assets.renderer.sceneNode)
+		assets.renderer.sceneNode.name = "scene"
 		scene.rootNode.addChildNode(assets.renderer.cameraNode)
-
 		//Load sound assets associated to the SVG file
-		assets.loadSounds(name: name)
+		assets.loadSounds(name: name, type: "map")
+		soundNode.position.z = 5.0
 		scene.rootNode.addChildNode(soundNode)
+sceneView.pointOfView = soundNode
+		if assets.appType == "map"{
+			for child in scene.rootNode.childNode(withName: "scene", recursively: true)!.childNodes{
+				print(child.name)
+child.addAudioPlayer(SCNAudioPlayer(source: assets.sounds[assets.soundIndices.index(of: "\(child.name!).mp3")!]))
+				print(child.audioPlayers.count)
+			}
+			}
 	}
 
 }

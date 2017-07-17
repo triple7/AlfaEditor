@@ -24,10 +24,12 @@ extension SceneViewController: LeapDelegate{
 			}
 			//assets.speech.startSpeaking(point.description)
 			//layerEngine.playInterfaceFX("selected")
+			if assets.appType == "sampler"{
 			if currentNode != ""{
 			soundNode.addAudioPlayer(SCNAudioPlayer(source: assets.sounds[(Int(currentNode.components(separatedBy: "d").last!)!)-1]))
 			}
 		}else{
+		}
 		}
 	}
 

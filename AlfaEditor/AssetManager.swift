@@ -44,6 +44,7 @@ var sampleNames = [String]()
 
 	//Sounds associated to a given file
 	var sounds = [SCNAudioSource]()
+var soundIndices = [String]()
 
 	//Materials for selected and unselected objects
 	let selectedMaterial = SCNMaterial()
@@ -125,18 +126,27 @@ categories = Category.filesList(list: allFiles)
 
 	func loadSounds(name: String, type: String = "sampler"){
 		do{
-			let soundDirectory = try FileManager.default.contentsOfDirectory(atPath: "\(dataPath)sounds/\(name)")
+			let soundDirectory = try FileManager.default.contentsOfDirectory(atPath: "\(dataPath)sounds/\(name.components(separatedBy: ".").first!)")
 			for clipName in soundDirectory{
-				print(clipName)
-				let path = "\(dataPath)sounds/\(name)/\(clipName)"
+				let path = "\(dataPath)sounds/\(name.components(separatedBy: ".").first!)/\(clipName)"
 				let url = URL(fileURLWithPath: path)
+				print(url.absoluteString)
 				let source = SCNAudioSource(url: url)!
+				if type == "sampler"{
+				source.loops = false
+				}else{
+					source.loops = true
+				}
+				source.volume = 5.0
+				source.isPositional = true
 sounds.append(source)
+				soundIndices.append(clipName)
 			}
 		}catch{
 			print("error loading sound directory")
 		}
-
+appType = type
+		print("finished loading sounds")
 	}
 
 	//Mark: System tab asset management functions
@@ -200,12 +210,12 @@ nodes.removeAll()
 		nodesFeatures.removeAll()
 		appType = ""
 		sounds.removeAll()
+		soundIndices.removeAll()
 	}
 
 	func speechSynthesizer(_ sender: NSSpeechSynthesizer, didFinishSpeaking finishedSpeaking: Bool) {
 		isSpeaking = false
 	}
-
 
 }
 
