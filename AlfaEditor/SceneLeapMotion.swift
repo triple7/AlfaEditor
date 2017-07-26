@@ -18,19 +18,18 @@ extension SceneViewController: LeapDelegate{
 	//Mark: Gestures and coordinates
 
 	func performGesture(){
-		if gestureFlag{
+DispatchQueue.global(qos: .userInteractive).async{
+		self.gestureFlag = true
 			delay(0.15){
 				self.gestureFlag = false
 			}
-			//assets.speech.startSpeaking(point.description)
 			//layerEngine.playInterfaceFX("selected")
-			if assets.appType == "sampler"{
-			if currentNode != ""{
-			soundNode.addAudioPlayer(SCNAudioPlayer(source: assets.sounds[(Int(currentNode.components(separatedBy: "d").last!)!)-1]))
-			}
-		}else{
-		}
-		}
+	if assets.appType == 0{
+self.samplerGesture()
+	}else{
+self.mapGesture()
+	}
+	}
 	}
 
 	// MARK: - LeapDelegate Methods
@@ -84,7 +83,6 @@ extension SceneViewController: LeapDelegate{
 				let gestures = currentFrame.gestures(self.controller!.frame(10)!) as! [LeapGesture]
 				for gesture in gestures{
 					if gesture.isValid {
-						self.gestureFlag = true
 						self.performGesture()
 					}
 				}
@@ -92,14 +90,12 @@ extension SceneViewController: LeapDelegate{
 			let hands = currentFrame.hands as! [LeapHand]
 			if !hands.isEmpty{
 				let endPoint = (hands[0].fingers as! [LeapFinger])[1].stabilizedTipPosition
-				let xProjection = (endPoint!.x * Float(self.paperToLensHeight)) / endPoint!.y
-				let zProjection = (endPoint!.z * Float(self.paperToLensHeight)) / endPoint!.y
-				let Y = zProjection + Float(self.paperWidth)/2
-				let X = -xProjection + Float(self.paperHeight)/2
-				if Int(X) > 0 && Int(X) < self.paperWidth {
-					if Int(Y) > 0 && Int(Y) < self.paperHeight {
-						self.point.x = CGFloat( self.paperWidth - Int(X))
-						self.point.y = CGFloat( self.paperHeight - Int(Y))
+				let Y = Int((endPoint!.z * Float(self.paperToLensHeight)) / endPoint!.y + Float(self.paperWidth)/2)
+				let X = Int(-(endPoint!.x * Float(self.paperToLensHeight)) / endPoint!.y + Float(self.paperHeight)/2)
+				if X > 0 && X < self.paperWidth {
+					if Y > 0 && Y < self.paperHeight {
+						self.leapX = CGFloat( self.paperWidth - X)
+						self.leapY = CGFloat( self.paperHeight - Y)
 					}
 				}
 			}

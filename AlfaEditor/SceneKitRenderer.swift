@@ -147,7 +147,6 @@ class SceneKitRenderer : NSObject, MapParserDelegate  {
 		node.castsShadow = true
 		node.renderingOrder = renderingOrder
 		renderingOrder = renderingOrder + 1
-		print("node is \(node.name)")
 		if node.name != nil{
 		sceneNode.addChildNode(node)
 		if node.name! != "canvas_background"{

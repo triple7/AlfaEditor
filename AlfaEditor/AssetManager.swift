@@ -11,6 +11,17 @@ import SceneKit
 import Cocoa
 import AppKit
 
+enum AppType:String{
+	case Sampler = "sampler"
+	case Map = "map"
+	var code:Int{
+		switch self{
+		case .Sampler: return 0
+		case .Map: return 1
+		}
+	}
+}
+
 class Assetmanager:NSObject, NSSpeechSynthesizerDelegate{
 	let renderer:SceneKitRenderer
 	let parser:SVGParser
@@ -32,7 +43,7 @@ let image:NSImage!
 	let art = "art.scnassets/"
 
 	//Application type
-	var appType = ""
+var appType = 0
 
 	//Audio Assets
 	var samples = [SCNAudioSource]()
@@ -130,7 +141,6 @@ categories = Category.filesList(list: allFiles)
 			for clipName in soundDirectory{
 				let path = "\(dataPath)sounds/\(name.components(separatedBy: ".").first!)/\(clipName)"
 				let url = URL(fileURLWithPath: path)
-				print(url.absoluteString)
 				let source = SCNAudioSource(url: url)!
 				if type == "sampler"{
 				source.loops = false
@@ -139,14 +149,14 @@ categories = Category.filesList(list: allFiles)
 				}
 				source.volume = 5.0
 				source.isPositional = true
+				source.load()
 sounds.append(source)
 				soundIndices.append(clipName)
 			}
 		}catch{
 			print("error loading sound directory")
 		}
-appType = type
-		print("finished loading sounds")
+appType = AppType(rawValue: type)!.code
 	}
 
 	//Mark: System tab asset management functions
@@ -185,11 +195,7 @@ try FileManager.default.createDirectory(atPath: "\(dataPath)SVG/\(name)", withIn
 	}
 
 	func createNewFile(name: String){
-		do{
-try FileManager.default.createFile(atPath: "\(dataPath)SVG/\(categories[currentCategory].name)", contents: nil, attributes: nil)
-		}catch{
-			print("Couldn't create file")
-		}
+FileManager.default.createFile(atPath: "\(dataPath)SVG/\(categories[currentCategory].name)", contents: nil, attributes: nil)
 	}
 
 	func addFileToCategory(file: URL){
@@ -208,7 +214,6 @@ nodes.removeAll()
 		sceneNodes.removeAll()
 		nodeMaterials.removeAll()
 		nodesFeatures.removeAll()
-		appType = ""
 		sounds.removeAll()
 		soundIndices.removeAll()
 	}
